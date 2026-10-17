@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+<title>莱娜 · 数据分析 / 项目助理 / 业务运营</title>
+<meta name="description" content="莱娜，中山大学遥感科学与技术专业大三学生。寒假实习求职：数据分析 / 项目助理 / 业务运营。">
+<meta name="theme-color" content="#ffffff">
+
+<!-- 分享到微信 / 社交平台时的卡片信息 -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="莱娜 · 数据分析 / 项目助理 / 业务运营">
+<meta property="og:description" content="中山大学 · 遥感科学与技术 · 大三">
+<meta property="og:image" content="assets/portrait.jpg">
+
+<style>
+/* ============================================================
+   设计系统：极简 / 高级 / 科技感
+   改主题色只需动 --accent 和 --accent-soft
+   ============================================================ */
+:root{
+  --bg:#ffffff;
+  --ink:#0b0f19;
+  --muted:#6b7280;
+  --faint:#9ca3af;
+  --line:#e7e9ee;
+  --soft:#f6f7f9;
+  --card:#ffffff;
+  --accent:#2563eb;
+  --accent-soft:#eff4ff;
+  --radius:16px;
+  --radius-sm:10px;
+  --shadow-1:0 1px 2px rgba(11,15,25,.05), 0 1px 3px rgba(11,15,25,.04);
+  --shadow-2:0 12px 32px rgba(11,15,25,.10), 0 2px 8px rgba(11,15,25,.05);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --maxw:1080px;
+  --navh:64px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB",
+         "Microsoft YaHei","Noto Sans SC",Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);
+  font-size:16px;line-height:1.8;-webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p,ul{margin:0}
+ul{padding:0;list-style:none}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* 锚点跳转时避开悬浮导航 */
+section[id]{scroll-margin-top:calc(var(--navh) + 20px)}
+
+/* ============================================================
+   顶部导航
+   ============================================================ */
+.nav{
+  position:sticky;top:0;z-index:50;height:var(--navh);
+  background:rgba(255,255,255,.82);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);
+  backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.brand{
+  font-weight:750;font-size:1.05rem;letter-spacing:-.01em;white-space:nowrap;
+}
+.brand .dot{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{
+  padding:8px 12px;border-radius:8px;font-size:.86rem;color:var(--muted);
+  font-weight:500;transition:color .18s var(--ease),background .18s var(--ease);
+  white-space:nowrap;
+}
+.nav-links a:hover{color:var(--ink);background:var(--soft)}
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.hero{
+  position:relative;overflow:hidden;
+  border-bottom:1px solid var(--line);
+}
+/* 细点阵背景——数据看板的味道，很克制 */
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(circle, #d7dbe4 1px, transparent 1px);
+  background-size:24px 24px;
+  -webkit-mask-image:radial-gradient(ellipse 75% 65% at 30% 20%, #000 20%, transparent 75%);
+  mask-image:radial-gradient(ellipse 75% 65% at 30% 20%, #000 20%, transparent 75%);
+  opacity:.75;pointer-events:none;
+}
+.hero-inner{
+  position:relative;display:grid;grid-template-columns:1fr 240px;
+  gap:56px;align-items:center;
+  /* 只改上下，别用 padding 简写——会连同 .wrap 的左右内边距一起清成 0 */
+  padding-top:72px;padding-bottom:64px;
+}
+.hero-copy h1{
+  font-size:clamp(2.8rem,6vw,4rem);font-weight:760;letter-spacing:-.035em;
+  line-height:1.05;margin-bottom:14px;
+}
+.hero-copy .ident{
+  font-size:1rem;color:var(--muted);font-weight:500;margin-bottom:18px;
+  letter-spacing:.01em;
+}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent-soft);color:#1d4ed8;
+  border:1px solid #dbe6ff;border-radius:999px;
+  padding:7px 15px;font-size:.86rem;font-weight:600;letter-spacing:.01em;
+  margin-bottom:26px;
+}
+.badge .pulse{
+  width:7px;height:7px;border-radius:50%;background:var(--accent);
+  box-shadow:0 0 0 0 rgba(37,99,235,.5);animation:pulse 2.4s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(37,99,235,.45)}
+  70%{box-shadow:0 0 0 8px rgba(37,99,235,0)}
+  100%{box-shadow:0 0 0 0 rgba(37,99,235,0)}
+}
+.intro p{font-size:.95rem;line-height:1.9;color:#374151;margin-bottom:12px}
+.intro p.en{
+  color:var(--muted);font-size:.9rem;line-height:1.85;
+  padding-left:14px;border-left:2px solid var(--line);
+}
+.portrait-wrap{
+  position:relative;width:240px;aspect-ratio:3/4;overflow:hidden;
+  border-radius:var(--radius);border:1px solid var(--line);
+  box-shadow:var(--shadow-2);background:var(--soft);
+}
+.portrait{
+  width:100%;height:100%;object-fit:cover;object-position:center 15%;
+  display:block;border:0;border-radius:0;box-shadow:none;
+}
+
+/* 联系图标行 */
+.contact-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.contact-row a{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:8px 14px;border:1px solid var(--line);border-radius:999px;
+  font-size:.84rem;color:var(--muted);background:var(--card);
+  transition:all .2s var(--ease);
+}
+.contact-row a:hover{
+  color:var(--ink);border-color:#cfd5e0;box-shadow:var(--shadow-1);
+  transform:translateY(-1px);
+}
+.contact-row svg{width:15px;height:15px;flex:none;stroke:currentColor;
+  fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+/* ============================================================
+   通用区块
+   ============================================================ */
+.section{padding:76px 0;border-bottom:1px solid var(--line)}
+.section:last-of-type{border-bottom:none}
+.sec-head{margin-bottom:36px}
+.sec-label{
+  display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:10px;
+}
+.sec-head h2{
+  font-size:clamp(1.5rem,3vw,1.9rem);font-weight:700;letter-spacing:-.025em;
+  line-height:1.25;
+}
+.sec-sub{color:var(--muted);font-size:.92rem;margin-top:10px;max-width:62ch}
+
+/* ============================================================
+   English 区
+   ============================================================ */
+.video-slot{
+  /* 视频是竖屏（544×960），框也照这个比例走；真放进去后 JS 会按视频实际比例再校准 */
+  position:relative;aspect-ratio:17/30;border-radius:var(--radius);
+  border:1px dashed #cbd2de;background:linear-gradient(180deg,#fafbfc,#f4f6f9);
+  display:grid;place-items:center;text-align:center;padding:20px;
+  overflow:hidden;
+}
+.video-slot .play{
+  width:52px;height:52px;border-radius:50%;background:var(--card);
+  border:1px solid var(--line);box-shadow:var(--shadow-1);
+  display:grid;place-items:center;margin:0 auto 14px;
+}
+.video-slot .play svg{width:20px;height:20px;fill:var(--accent);stroke:none;margin-left:2px}
+.video-slot .hint{font-size:.82rem;color:var(--muted);line-height:1.7}
+.video-slot .hint code{
+  font-family:var(--mono);font-size:.82em;background:#eef1f6;
+  padding:2px 6px;border-radius:5px;color:#374151;
+}
+.video-slot iframe,.video-slot video{position:absolute;inset:0;width:100%;height:100%;border:0}
+/* 视频就位后去掉虚线占位样式 */
+.video-slot.filled{border-style:solid;border-color:var(--line);background:#000;padding:0}
+/* 万一换了横屏视频，也不裁人脸，留边显示 */
+.video-slot video{object-fit:contain;background:#000}
+
+/* 两个视频并排；手机上一上一下。整体限宽，别让竖屏视频拉太长 */
+.video-grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;
+  max-width:704px;
+}
+.video-item{max-width:340px;width:100%;margin-inline:auto}
+.video-cap{
+  margin:0 0 10px;font-family:var(--mono);font-size:.72rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;
+}
+
+.praise{
+  margin-top:26px;padding:22px 26px;background:var(--soft);
+  border-left:3px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  font-size:.94rem;line-height:1.9;color:#374151;
+}
+.praise strong{color:var(--ink);font-weight:650}
+
+/* ============================================================
+   项目卡片
+   ============================================================ */
+.cards{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;
+}
+.card{
+  position:relative;display:flex;flex-direction:column;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 26px 24px;box-shadow:var(--shadow-1);
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),
+             border-color .3s var(--ease);
+  will-change:transform;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-2);
+  border-color:#c9d6f5;
+}
+.card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.card h3{
+  font-size:1.06rem;font-weight:700;letter-spacing:-.015em;line-height:1.45;
+  margin-bottom:10px;
+}
+.role{
+  display:inline-block;flex:none;font-size:.73rem;font-weight:600;
+  color:var(--accent);background:var(--accent-soft);
+  border-radius:6px;padding:3px 9px;white-space:nowrap;
+  letter-spacing:.01em;
+}
+.tools{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 16px}
+.tools span{
+  font-family:var(--mono);font-size:.71rem;color:#4b5563;
+  background:#f3f4f7;border-radius:5px;padding:3px 8px;letter-spacing:.01em;
+}
+.card .body{font-size:.875rem;line-height:1.85;color:#4b5563;flex:1}
+.card .body b{color:var(--ink);font-weight:650}
+.card .result{
+  margin-top:16px;padding-top:14px;border-top:1px solid var(--line);
+  font-size:.845rem;line-height:1.8;color:#374151;
+}
+.card .result b{color:var(--accent);font-weight:680;font-variant-numeric:tabular-nums}
+
+/* 卡片里的代码块：<pre class="codeblock">…</pre>
+   深色底 + 等宽字体 + 横向滚动，长行不会撑破卡片 */
+.codeblock{
+  margin-top:14px;padding:13px 15px;border-radius:10px;
+  background:#0f172a;color:#d6e2f2;border:1px solid #1e293b;
+  font-family:var(--mono);font-size:.72rem;line-height:1.75;
+  /* pre-wrap：长行自动换行，手机上也不会被截断；仍保留横向滚动兜底 */
+  white-space:pre-wrap;word-break:break-word;overflow-x:auto;
+}
+.codeblock code{font:inherit;color:inherit}
+
+/* 卡片里的配图：<img class="shot" src="assets/xxx.png" alt="说明"> */
+.card .shot{display:block;width:100%;height:auto;margin-top:14px;
+  border-radius:10px;border:1px solid var(--line);background:var(--soft)}
+
+/* ============================================================
+   项目证据区：图片墙 / 下载 / PDF / 外链
+   ============================================================ */
+.evi{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line)}
+.evi-label{
+  display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--faint);font-weight:600;margin-bottom:10px;
+}
+.shot-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.shot-grid figure{margin:0}
+.shot-grid img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:var(--soft)}
+.shot-grid figcaption{font-size:.72rem;color:var(--faint);margin-top:4px;line-height:1.5}
+.shot-solo{display:block;width:100%;height:auto;margin-top:10px;border-radius:10px;
+  border:1px solid var(--line);background:var(--soft)}
+.dl-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.dl{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:7px 13px;border:1px solid var(--line);border-radius:999px;
+  font-size:.8rem;color:var(--muted);background:var(--card);
+  transition:all .2s var(--ease);
+}
+.dl:hover{color:var(--ink);border-color:#c9d6f5;box-shadow:var(--shadow-1)}
+.dl svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.8;
+  stroke-linecap:round;stroke-linejoin:round}
+.pdfbox{
+  display:flex;align-items:center;gap:12px;margin-top:12px;
+  padding:13px 15px;border:1px solid var(--line);border-radius:12px;background:var(--soft);
+  transition:border-color .2s var(--ease);
+}
+.pdfbox:hover{border-color:#c9d6f5}
+.pdfbox .pdf-ico{width:32px;height:32px;flex:none;border-radius:8px;background:#fee2e2;
+  color:#dc2626;display:grid;place-items:center;font-weight:800;font-size:.78rem}
+.pdfbox .pdf-t{font-size:.84rem;color:var(--ink);font-weight:620;line-height:1.4}
+.pdfbox .pdf-s{font-size:.72rem;color:var(--faint)}
+.ext{margin-top:12px}
+.ext-title{font-size:.72rem;color:var(--faint);font-weight:600;margin-bottom:5px}
+.ext a{display:block;font-size:.8rem;color:var(--accent);line-height:1.75;padding:1px 0}
+.ext a:hover{text-decoration:underline}
+.ext a svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2;
+  stroke-linecap:round;stroke-linejoin:round;margin-right:5px;vertical-align:-1px}
+.card video.demo{width:100%;aspect-ratio:16/9;margin-top:10px;border-radius:10px;
+  border:1px solid var(--line);background:#000;display:block}
+
+/* ============================================================
+   AI 能力
+   ============================================================ */
+.ai-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2px;
+  background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+/* 7 条在 3 列下会空出两格；让最后一条通栏补满，避免右下角出现一块灰底 */
+.ai-grid .ai-item:last-child{grid-column:1/-1}
+.ai-item{
+  background:var(--card);padding:26px 24px;
+  transition:background .22s var(--ease);
+}
+.ai-item:hover{background:#fbfcfe}
+.ai-item .ico{
+  width:34px;height:34px;border-radius:9px;background:var(--soft);
+  display:grid;place-items:center;margin-bottom:14px;font-size:1rem;
+}
+.ai-item h3{font-size:.95rem;font-weight:680;margin-bottom:8px;letter-spacing:-.01em}
+.ai-item p{font-size:.855rem;line-height:1.8;color:#5b6270}
+.ai-item p b{color:var(--ink);font-weight:650}
+
+/* AI 具体案例卡片 */
+.ai-case{
+  margin-top:18px;padding:24px 26px;border:1px solid var(--line);border-radius:var(--radius);
+  background:linear-gradient(180deg,var(--accent-soft),var(--card));
+}
+.ai-case .tag{
+  display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px;
+}
+.ai-case h3{font-size:1rem;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
+.ai-case p{font-size:.875rem;line-height:1.85;color:#4b5563;max-width:70ch}
+.ai-case p b{color:var(--ink);font-weight:650}
+.ai-case .dl-row{margin-top:14px}
+
+/* ============================================================
+   Contact
+   ============================================================ */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.contact-card{
+  display:flex;align-items:center;gap:14px;padding:20px 22px;
+  border:1px solid var(--line);border-radius:var(--radius);background:var(--card);
+  transition:all .25s var(--ease);
+}
+.contact-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-2);border-color:#c9d6f5}
+.contact-card .ico{
+  width:38px;height:38px;flex:none;border-radius:10px;background:var(--accent-soft);
+  display:grid;place-items:center;
+}
+.contact-card .ico svg{width:17px;height:17px;stroke:var(--accent);fill:none;
+  stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.contact-card .txt{display:flex;flex-direction:column;min-width:0}
+.contact-card .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--faint);margin-bottom:3px}
+.contact-card .v{font-size:.9rem;font-weight:600;letter-spacing:-.005em;overflow-wrap:anywhere}
+
+/* ============================================================
+   页脚
+   ============================================================ */
+.footer{padding:36px 0 44px;color:var(--faint);font-size:.8rem}
+.footer-inner{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;
+  align-items:center;border-top:1px solid var(--line);padding-top:26px}
+
+/* ============================================================
+   响应式
+   ============================================================ */
+@media (max-width:860px){
+  .hero-inner{grid-template-columns:1fr;gap:34px;padding-top:48px;padding-bottom:44px}
+  .portrait-wrap{order:-1;max-width:190px;margin-inline:auto}
+  .section{padding:58px 0}
+  .cards{grid-template-columns:1fr}
+  .video-grid{grid-template-columns:1fr;gap:26px}
+}
+@media (max-width:620px){
+  :root{--navh:58px}
+  .wrap{padding:0 20px}
+  .nav-links{gap:0}
+  .nav-links a{padding:7px 9px;font-size:.8rem}
+  .hero-copy h1{font-size:2.6rem}
+  .contact-row{gap:7px}
+  .contact-row a{padding:7px 12px;font-size:.8rem}
+  .card{padding:22px 20px}
+  .praise{padding:18px 20px;font-size:.9rem}
+}
+/* 小屏时导航文字缩写为短标签 */
+@media (max-width:480px){
+  .nav-links a[data-short] span{display:none}
+  .nav-links a[data-short]::after{content:attr(data-short)}
+}
+
+/* 触屏没有 hover，去掉位移避免误触 */
+@media (hover:none){
+  .card:hover,.contact-card:hover,.contact-row a:hover{transform:none}
+}
+/* 尊重系统的「减少动态效果」 */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}
+/* 深色模式 */
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0b0e14;--ink:#e8eaed;--muted:#9aa0a6;--faint:#6b7280;
+    --line:#232833;--soft:#12161e;--card:#11151c;
+    --accent:#60a5fa;--accent-soft:#16233a;
+    --shadow-1:0 1px 2px rgba(0,0,0,.4);
+    --shadow-2:0 12px 32px rgba(0,0,0,.55);
+  }
+  .nav{background:rgba(11,14,20,.82)}
+  .hero::before{background-image:radial-gradient(circle,#2a3040 1px,transparent 1px)}
+  .intro p{color:#c4cad4}
+  .card .body,.praise{color:#b6bcc6}
+  .praise{background:var(--soft)}
+  .video-slot{background:linear-gradient(180deg,#0f131a,#0c0f15);border-color:#2a3040}
+  .tools span{background:#191e28;color:#9aa0a6}
+  .badge{color:#93c5fd;border-color:#1e3a5f}
+  .ai-item:hover{background:#161b24}
+  .ai-item p{color:#9aa0a6}
+  .ai-case p{color:#b6bcc6}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ==================== 导航 ==================== -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+    <a href="#top" class="brand">莱娜<span class="dot">.</span></a>
+    <nav class="nav-links">
+      <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+      <a href="#english" data-short="English"><span>English Proficiency &amp; Communication</span></a>
+      <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+      <a href="#projects" data-short="项目"><span>Projects</span></a>
+      <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+      <a href="#ai" data-short="AI"><span>AI Skills</span></a>
+      <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+      <a href="#contact" data-short="联系"><span>Contact</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ==================== Hero ==================== -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <h1>莱娜</h1>
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <p class="ident">中山大学　·　遥感科学与技术　·　大三</p>
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <p class="badge"><span class="pulse"></span>寒假实习 — 数据分析 / 项目助理 / 业务运营</p>
+
+        <div class="intro">
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <p>您好，我是莱娜，中山大学遥感科学与技术专业本科生。我可以熟练使用Python、Matlab进行数据清洗、统计建模与可视化，掌握ArcGIS、ENVI空间分析，持计算机二级证书；英语通过CET-6，具备良好的英文文献阅读与技术文档理解能力。我注重AI协作，在项目中熟练借助AI工具辅助代码调试、方法检索与结果核对，提升分析与实现效率。曾独立完成太平洋海平面变化趋势分析项目，整合4类7套异构数据产品，巧妙处理GRACE缺月带来的采样偏差，完成趋势拟合与不确定性分析，并用跨产品秩相关0.963验证结果一致性；也做过车牌识别系统，兼顾传统图像处理与深度学习两条路线，整牌准确率达76.7%。校园中担任学生助理与学生会干事，具备数据校对、活动统筹与沟通协作能力。我做事细致、能独立推进项目，希望在实践中进一步提升自身能力。</p>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <p class="en">Hello, I'm Lena, an undergraduate student majoring in Remote Sensing Science and Technology at Sun Yat-sen University. I am proficient in using Python and MATLAB for data cleaning, statistical modeling, and visualization, and I have hands-on experience with ArcGIS and ENVI for spatial analysis. I also hold a National Computer Rank Examination Level 2 certificate. I have passed CET-6 and possess strong English reading skills, enabling me to comprehend academic literature and technical documentation effectively. I place great emphasis on AI collaboration and have, in my projects, skillfully leveraged AI tools to assist with code debugging, methodology retrieval, and result verification, thereby enhancing analytical and implementation efficiency. I independently completed a project analyzing Pacific sea-level change trends, in which I integrated four categories of heterogeneous data products (seven datasets in total), adeptly addressed the sampling bias caused by missing GRACE months, and conducted trend fitting and uncertainty analysis. I validated the consistency of my results with a cross-product rank correlation of 0.963. I have also developed a license plate recognition system, covering both traditional image processing and deep learning approaches, achieving an overall plate recognition accuracy of 76.7%. On campus, I have served as a student assistant and a member of the student union, where I developed skills in data proofreading, event coordination, and communication. I am detail-oriented and capable of independently driving projects forward, and I hope to further enhance my abilities through practical experience.</p>
+        </div>
+
+        <div class="contact-row">
+          <a href="tel:+8615819815507" aria-label="拨打电话">
+            <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            +86 158 1981 5507
+          </a>
+          <a href="mailto:julaiti@mail2.sysu.edu.cn" aria-label="发送邮件">
+            <svg viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg>
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            julaiti@mail2.sysu.edu.cn
+          </a>
+          <a href="#contact" aria-label="微信">
+            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.6 9.6 0 0 1-2.8-.4L4 21l1.4-3.9A8.3 8.3 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg>
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            微信 LZNaa0501
+          </a>
+        </div>
+      </div>
+
+      <div class="portrait-wrap">
+        <img class="portrait" src="assets/portrait.jpg" alt="莱娜的证件照" width="900" height="1200">
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== English ==================== -->
+  <section class="section" id="english">
+    <div class="wrap">
+      <div class="sec-head">
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <span class="sec-label">01 / English</span>
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <h2>English Proficiency &amp; Communication</h2>
+      </div>
+
+      <!--
+        ⚠️ 两个视频，放法都不用改代码：
+
+        最简单：把第 1 个视频重命名为 speaking-1.mp4，第 2 个命名为 speaking-2.mp4，
+               两个都放进 assets 文件夹。页面会自动检测到并替换掉对应的占位框
+               （缺哪一个就只显示哪一个的占位框）。
+
+        要嵌 B 站：把对应的整个 <div class="video-slot">…</div> 替换成
+           <iframe src="https://player.bilibili.com/player.html?bvid=你的BV号"
+                   scrolling="no" frameborder="0" allowfullscreen></iframe>
+        两种方式都会自动铺满 16:9 区域。
+      -->
+      <div class="video-grid">
+
+        <!-- ==================== 视频 1 ==================== -->
+        <div class="video-item">
+          <!-- ✏️ 可改：只有两个视频时，这行小标题可以删掉；改字时别动外面的 <p> -->
+          <p class="video-cap">Speaking 01</p>
+          <video id="talk1" controls playsinline preload="metadata" poster="assets/speaking-1.jpg" hidden>
+            <source src="assets/speaking-1.mp4" type="video/mp4">
+          </video>
+          <div class="video-slot" id="videoSlot1">
+            <div>
+              <div class="play">
+                <svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>
+              </div>
+              <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+              <p class="hint">
+                视频待插入<br>
+                <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+                <span style="font-size:.8rem;opacity:.8">重命名为 <code>speaking-1.mp4</code> 放进 <code>assets</code>，刷新即出现</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== 视频 2 ==================== -->
+        <div class="video-item">
+          <!-- ✏️ 可改：只有两个视频时，这行小标题可以删掉；改字时别动外面的 <p> -->
+          <p class="video-cap">Speaking 02</p>
+          <video id="talk2" controls playsinline preload="metadata" poster="assets/speaking-2.jpg" hidden>
+            <source src="assets/speaking-2.mp4" type="video/mp4">
+          </video>
+          <div class="video-slot" id="videoSlot2">
+            <div>
+              <div class="play">
+                <svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>
+              </div>
+              <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+              <p class="hint">
+                视频待插入<br>
+                <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+                <span style="font-size:.8rem;opacity:.8">重命名为 <code>speaking-2.mp4</code> 放进 <code>assets</code>，刷新即出现</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+      <p class="praise">
+这里记录了我日常的英语口语练习视频。在这些视频中，我尝试用英文分享自己的想法，整体表达比较自然流畅。对我来说，语言是帮助我更好地理解专业知识、顺畅沟通的工具。在日常学习中，我们专业老师经常会布置大量的英文文献阅读，我也有一门全英授课的专业课。这些真实的学术环境让我习惯了直接用英文去理解和消化信息。在这个过程中，我不仅积累了许多专业词汇，也逐渐培养了自己清晰的表达逻辑。我始终认为，好的沟通不仅仅是词汇的堆砌，更是准确传递信息和真诚交流的过程。希望这些日常的积累，能帮助我在未来的跨文化协作与实习工作中，更从容地应对各种交流场景。
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== Projects ==================== -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="sec-head">
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <span class="sec-label">02 / Work</span>
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <h2>Projects</h2>
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <p class="sec-sub">七个项目，从多源数据整合与统计建模，到算法实现与空间制图。每个项目都附有汇报 PPT、代码、地图或演示视频，可在线查看。</p>
+      </div>
+
+      <div class="cards">
+
+        <!-- ==================== 项目 1 ==================== -->
+        <article class="card">
+          <div class="card-top">
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            <h3>太平洋海平面变化趋势分析</h3>
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            <span class="role">独立完成</span>
+          </div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="tools"><span>Python</span><span>pandas</span><span>xarray</span><span>Matlab</span><span>AI 协作</span></div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="body">
+            整合 4 类 7 套异构产品——卫星测高海平面异常（CMEMS）、三种 GRACE/GRACE-FO mascon 海水质量（CSR / JPL / GSFC）、两类比容海平面（IAP / SIO）——统一经度约定与时间口径，锁定 2005–2024 年共 225 个月公共时段。针对 GRACE 每年缺 2–4 个月造成的采样偏差，用「扣逐月气候态 + 按可用月求年均」在零插值条件下消除偏差；对逐月序列拟合四项模型提取趋势项，并用 Newey-West 校正自相关。
+          </div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="result">
+            质量项占测高趋势 <b>52%–59%</b>；八种组合中 RG + GSFC 收支闭合最优，残差仅 <b>+0.22 mm/yr</b>；<b>76%</b> 海洋像素显著上升，跨产品秩相关 <b>0.963</b> 验证结果一致性。
+          </div>
+
+          <div class="evi">
+            <span class="evi-label">证明材料</span>
+            <a class="pdfbox" href="assets/pdf/pacific-sea-level.pdf" target="_blank" rel="noopener">
+              <span class="pdf-ico">PDF</span>
+              <span>
+                <span class="pdf-t">汇报 PPT · 太平洋海平面变化趋势分析</span><br>
+                <span class="pdf-s">研究方法、逐月趋势图与收支闭合结果（在线查看 / 下载）</span>
+              </span>
+            </a>
+            <div class="ext">
+              <span class="ext-title">数据来源 · 全部可公开下载</span>
+              <a href="https://data.marine.copernicus.eu/products" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>CMEMS 卫星测高海平面异常（SLA）</a>
+              <a href="https://www2.csr.utexas.edu/grace/RL06_mascons.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>CSR GRACE/GRACE-FO RL06 Mascon</a>
+              <a href="https://grace.jpl.nasa.gov/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>JPL GRACE/GRACE-FO Mascon</a>
+              <a href="https://earth.gsfc.nasa.gov/geo/data/grace-mascons" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>GSFC GRACE Mascon</a>
+              <a href="http://www.ocean.iap.ac.cn/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>IAP 海洋比容海平面（中科院大气物理研究所）</a>
+              <a href="https://argo.ucsd.edu/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>SIO 比容海平面（Scripps / Argo）</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==================== 项目 2 ==================== -->
+        <article class="card">
+          <div class="card-top">
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            <h3>车牌识别系统<br>图像处理 × 深度学习双路线</h3>
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            <span class="role">算法实现</span>
+          </div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="tools"><span>Python</span><span>OpenCV</span><span>PyTorch</span><span>NumPy</span><span>PIL</span></div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="body">
+            传统路线实现「HSV 定位 → 四角点透视校正 → CLAHE + OTSU → 投影分割 → 模板匹配」完整链路，自研「字符间隙排序法」解决窄字符误并错位；深度学习路线搭 LPRNet（Conv×4 → BiLSTM → CTC），实现无需分割的整图序列识别。两条路线共用同一套合成样本，便于对照定位各自的失效模式。
+          </div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="result">
+            整牌准确率 <b>76.7%</b>、字符级 <b>87.4%</b>、分割字符数正确率 <b>98.3%</b>；定位出两大失效原因并提出改进方案。
+          </div>
+
+          <div class="evi">
+            <span class="evi-label">代码 · 三条入口，均可直接运行</span>
+            <pre class="codeblock"><code># demo.py —— 主入口，两条路线可切换
+#   python demo.py --eval --n 40 --route dip     # 路线 A：传统图像处理
+#   python demo.py --eval --n 40 --route both    # 路线 A + B 对照
+import cv2, numpy as np
+from PIL import Image, ImageDraw
+
+from plate_dip import DIPPlateRecognizer, FormatValidator   # 路线 A：HSV→透视校正→CLAHE+OTSU→投影分割→模板匹配
+import lprnet_pytorch as lpr                                # 路线 B：LPRNet（Conv×4→BiLSTM→CTC）</code></pre>
+            <div class="dl-row">
+              <a class="dl" href="assets/code/plate-demo.py" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>plate-demo.py</a>
+              <a class="dl" href="assets/code/plate-dip.py" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>plate-dip.py</a>
+              <a class="dl" href="assets/code/plate-lprnet.py" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>plate-lprnet.py</a>
+            </div>
+            <div class="shot-grid">
+              <figure><img src="assets/img/plate-pipeline.png" alt="识别流程可视化"><figcaption>传统路线完整流程可视化</figcaption></figure>
+              <figure><img src="assets/img/plate-s2.png" alt="识别样例 1"><figcaption>合成样本识别结果示例</figcaption></figure>
+            </div>
+            <div class="ext">
+              <span class="ext-title">延伸阅读</span>
+              <a href="https://arxiv.org/abs/1806.10447" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>LPRNet：Zherzdev &amp; Gruzdev, 2018（arXiv:1806.10447）</a>
+              <a href="https://opencv.org/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>OpenCV 计算机视觉库</a>
+              <a href="https://pytorch.org/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>PyTorch 深度学习框架</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==================== 项目 3 ==================== -->
+        <article class="card">
+          <div class="card-top">
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            <h3>广州大学城外卖配送压力评价</h3>
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            <span class="role">数据建模</span>
+          </div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="tools"><span>ArcGIS</span><span>高德 POI</span><span>Excel</span><span>空间分析</span></div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="body">
+            融合高德餐饮 POI、路网、宿舍区三类数据，构建「餐饮供给 + 宿舍需求 + 可达性」的配送压力指数模型；用核密度、缓冲区、栅格叠加等空间方法量化压力分布，并拆解出主导因子与空间分异，把抽象的配送压力转化为可量化、可比较的空间指标。
+          </div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="result">
+            输出 <b>4 类</b>规范化专题地图，识别大学城高压力配送区域，为外卖站点选址与骑手调度提供依据。
+          </div>
+
+          <div class="evi">
+            <span class="evi-label">地图作品 · 输出结果</span>
+            <div class="shot-grid">
+              <figure><img src="assets/img/delivery-comprehensive.jpg" alt="配送压力综合评价图" loading="lazy"><figcaption>配送压力综合评价图</figcaption></figure>
+              <figure><img src="assets/img/delivery-dominant.jpg" alt="主导因子空间分异图" loading="lazy"><figcaption>配送压力主导因子空间分异图</figcaption></figure>
+              <figure><img src="assets/img/delivery-poi.jpg" alt="餐饮 POI 与宿舍分布图" loading="lazy"><figcaption>餐饮 POI 与宿舍空间分布图</figcaption></figure>
+              <figure><img src="assets/img/delivery-dorm.jpg" alt="各大学宿舍外卖依赖度图" loading="lazy"><figcaption>各大学宿舍外卖依赖度比例图</figcaption></figure>
+            </div>
+            <div class="ext">
+              <span class="ext-title">数据来源</span>
+              <a href="https://lbs.amap.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>高德开放平台（POI 数据）</a>
+              <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>OpenStreetMap（路网底图）</a>
+              <a href="https://www.esri.com/zh-cn/arcgis/products/arcgis-pro" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>ArcGIS Pro 空间分析</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==================== 项目 4 ==================== -->
+        <article class="card">
+          <div class="card-top">
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            <h3>武汉市城市空间中心提取</h3>
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            <span class="role">算法实现</span>
+          </div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="tools"><span>rasterio</span><span>SciPy</span><span>geopandas</span><span>pandas</span></div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="body">
+            基于人口密度、GDP、建筑密度三类栅格，用局部极大值滤波 + 最小间距去重提取三级城市中心（L1/L2/L3）；对每个中心拟合 Clark 距离衰减模型 A·exp(−βd)，用反距离加权最小二乘求衰减系数 β 与拟合优度 R²，从而量化城市单中心/多中心结构。
+          </div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="result">
+            用 <b>WarpedVRT 虚拟重投影</b>替代全量重投影，只裁切目标区域，解决大数据量栅格裁切卡死与内存溢出。
+          </div>
+
+          <div class="evi">
+            <span class="evi-label">核心代码 · 虚拟重投影与 Clark 拟合</span>
+            <pre class="codeblock"><code># 核心：WarpedVRT 虚拟重投影，只算需要裁切的区域，拒绝卡死
+with WarpedVRT(src, crs='EPSG:4326', resampling=Resampling.bilinear) as vrt:
+    out_image, _ = mask(vrt, [shp_geom], crop=True, nodata=0)
+
+# Clark 距离衰减模型：A·exp(-β·d)，反距离加权最小二乘求 β 与 R²
+def clark_model(d, A, beta): return A * np.exp(-beta * d)
+popt, _ = curve_fit(clark_model, x, y, p0=[np.max(y), 0.6], sigma=1/weights)
+r2 = 1 - (np.sum((y - y_pred)**2) / np.sum((y - np.mean(y))**2))</code></pre>
+            <div class="dl-row">
+              <a class="dl" href="assets/code/wuhan-center.py" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>wuhan-center.py（完整代码）</a>
+            </div>
+            <div class="ext">
+              <span class="ext-title">数据来源与文献</span>
+              <a href="https://www.worldpop.org/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>WorldPop 人口密度栅格</a>
+              <a href="https://www.resdc.cn/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>中科院资源环境科学数据中心（GDP 数据）</a>
+              <a href="https://doi.org/10.2307/2985931" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>Clark, 1951「Urban Population Densities」</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==================== 项目 5 ==================== -->
+        <article class="card">
+          <div class="card-top">
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            <h3>长江口遥感影像处理与地物解译</h3>
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            <span class="role">影像处理</span>
+          </div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="tools"><span>ENVI</span><span>ArcGIS</span><span>Landsat-8</span></div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="body">
+            对 Landsat-8 影像完成辐射定标、大气校正与图像增强，提升长江口水体、滩涂、植被等地物的区分度；对比监督分类、非监督分类等 4 种方法，用混淆矩阵评估并选出最优方案。
+          </div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="result">
+            完成 <b>7 类</b>地物解译，总体精度 <b>76%</b>、Kappa <b>0.69</b>。
+          </div>
+
+          <div class="evi">
+            <span class="evi-label">证明材料</span>
+            <a class="pdfbox" href="assets/pdf/yangtze-remote-sensing.pdf" target="_blank" rel="noopener">
+              <span class="pdf-ico">PDF</span>
+              <span>
+                <span class="pdf-t">遥感原理大作业汇报 · 长江口影像处理与地物解译</span><br>
+                <span class="pdf-s">处理流程、4 种分类方法对比与精度评价（在线查看 / 下载）</span>
+              </span>
+            </a>
+            <div class="ext">
+              <span class="ext-title">数据来源与工具</span>
+              <a href="https://earthexplorer.usgs.gov/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>USGS EarthExplorer（Landsat-8 影像下载）</a>
+              <a href="https://landsat.gsfc.nasa.gov/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>Landsat 卫星计划（NASA）</a>
+              <a href="https://www.nv5geospatialsoftware.com/Products/ENVI" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>ENVI 遥感图像处理平台</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==================== 项目 6 ==================== -->
+        <article class="card">
+          <div class="card-top">
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            <h3>公园信息检索与路径规划</h3>
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            <span class="role">算法实现</span>
+          </div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="tools"><span>C++</span><span>Dijkstra</span><span>Python</span><span>networkx</span></div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="body">
+            不依赖第三方图算法库，用 C++ 自建公园邻接矩阵与 Dijkstra 最短路径算法，实现按编号 / 类型 / 面积的信息检索；再用 Python + networkx + matplotlib 做成可视化界面，支持查询高亮、面积排序与两公园间最短路径的红色路径绘制。
+          </div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="result">
+            多组测试用例验证系统稳定运行，确认 Dijkstra 在 20 个公园的小尺度地理场景下可行。
+          </div>
+
+          <div class="evi">
+            <span class="evi-label">运行演示 · 可视化界面</span>
+            <video class="demo" controls playsinline preload="metadata" poster="assets/park-ui-demo.jpg">
+              <source src="assets/park-ui-demo.mp4" type="video/mp4">
+            </video>
+            <video class="demo" controls playsinline preload="metadata" poster="assets/park-run-demo.jpg">
+              <source src="assets/park-run-demo.mp4" type="video/mp4">
+            </video>
+            <div class="dl-row">
+              <a class="dl" href="assets/code/park-main.cpp" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>park-main.cpp</a>
+              <a class="dl" href="assets/code/park-search.cpp" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>park-search.cpp</a>
+              <a class="dl" href="assets/code/park-visualize.py" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>park-visualize.py</a>
+              <a class="dl" href="assets/code/parks.csv" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>parks.csv</a>
+              <a class="dl" href="assets/code/distances.csv" download><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>distances.csv</a>
+            </div>
+            <a class="pdfbox" href="assets/pdf/park-path-planning.pdf" target="_blank" rel="noopener">
+              <span class="pdf-ico">PDF</span>
+              <span>
+                <span class="pdf-t">数据结构与算法大作业汇报 PPT</span><br>
+                <span class="pdf-s">系统设计、算法流程与测试结果（在线查看 / 下载）</span>
+              </span>
+            </a>
+            <div class="ext">
+              <span class="ext-title">延伸阅读</span>
+              <a href="https://doi.org/10.1007/BF01386390" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>Dijkstra, 1959「A Note on Two Problems in Connexion with Graphs」</a>
+              <a href="http://lyylj.gz.gov.cn/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>广州市林业和园林局（公园信息）</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==================== 项目 7 ==================== -->
+        <article class="card">
+          <div class="card-top">
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            <h3>3S 野外综合实习</h3>
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            <span class="role">外业采集</span>
+          </div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="tools"><span>GNSS</span><span>RTK</span><span>全站仪</span><span>Matlab</span></div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="body">
+            实地操作 GNSS、全站仪、RTK 完成控制点与碎部点采集，用 Matlab 完成导线网平差与精度评估；并处理无人机与高光谱影像，产出校园数字化地图，覆盖从外业采集到内业成图、精度验证的完整流程。
+          </div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="result">
+            完成影像校正、分类与精度验证全流程，输出校园数字化地图。
+          </div>
+
+          <div class="evi">
+            <span class="evi-label">实习成果 · 数字化地图</span>
+            <img class="shot-solo" src="assets/img/3s-campus-map.png" alt="中珠校园数字化地图" loading="lazy">
+            <div class="ext">
+              <span class="ext-title">相关参考</span>
+              <a href="https://gp.sysu.edu.cn/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>中山大学地理科学与规划学院</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== AI Skills ==================== -->
+  <section class="section" id="ai">
+    <div class="wrap">
+      <div class="sec-head">
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <span class="sec-label">03 / Method</span>
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <h2>AI Skills</h2>
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <p class="sec-sub">我不把 AI 当成「替我做作业的工具」，而是当成一个需要被正确调度的协作方。下面每条方法都对应一个我实际做过的项目。</p>
+      </div>
+
+      <div class="ai-grid">
+
+        <div class="ai-item">
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="ico">🤖</div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <h3>AI 辅助编程</h3>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <p>用 AI 搭起车牌识别系统的算法骨架、写 LPRNet 网络结构并协助调试。但对给出的每一段代码，都会先跑通、再逐行确认逻辑——<b>「能跑」不等于「正确」</b>，这个区别在算法题里尤其致命。</p>
+        </div>
+
+        <div class="ai-item">
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="ico">📚</div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <h3>AI 辅助文献阅读</h3>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <p>读海平面趋势分析涉及的 GRACE mascon、比容海平面等英文文献时，用 AI 快速拆解方法与结论。但关键数字、定义和单位<b>一律回原文核对</b>，避免二手转述带来的偏差。</p>
+        </div>
+
+        <div class="ai-item">
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="ico">📊</div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <h3>AI 辅助数据处理</h3>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <p>把重复的清洗、绘图、格式转换交给 AI 批量完成，自己专注在口径定义与结果判读这些<b>不能外包的判断</b>上——比如太平洋项目里 4 类 7 套数据的经度约定与时间口径统一。</p>
+        </div>
+
+        <div class="ai-item">
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="ico">🎯</div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <h3>任务描述：一次说清</h3>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <p>数据来源文件、区域与时段、做哪种分析、要出哪几张图——<b>要求越具体，返工越少</b>。武汉城市中心提取里，我把「三类栅格 + Clark 模型 + 三级中心」一次说清，AI 才给出对路的代码。</p>
+        </div>
+
+        <div class="ai-item">
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="ico">🎨</div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <h3>规范前置</h3>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <p>开工前先把科研绘图规范与配色色卡交给 AI 学，并附已发表论文的图作范例。长江口遥感制图就用这套办法，保证配色统一、坐标轴与图例齐全，而不是库默认配色。</p>
+        </div>
+
+        <div class="ai-item">
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="ico">🔒</div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <h3>人工决策点前置</h3>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <p>口径、时段、区域与结论判读属于人工决策——在全局配置里写明：<b>遇到这些必须先来问，不许自行选择</b>。</p>
+        </div>
+
+        <div class="ai-item">
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="ico">✅</div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <h3>成品必须验证</h3>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <p>分阶段同步检查，成品再用机器重算核对数字，并逐图过目。<b>每个数字都能回溯到原始数据，每张图都经人工质检</b>——太平洋项目最终用跨产品秩相关 0.963 交叉验证了一致性。</p>
+        </div>
+
+      </div>
+
+      <!-- 具体案例：太平洋海平面项目全程 AI 协作 -->
+      <div class="ai-case">
+        <span class="tag">具体案例 · Case Study</span>
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <h3>太平洋海平面变化趋势分析 —— 全程 AI 协作完成</h3>
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <p>这是我把「AI 当协作者」用得最完整的一个项目：AI 帮我搭起 xarray / pandas 的数据处理骨架、写趋势拟合与 Newey-West 自相关校正的代码，也帮我快速检索 GRACE 缺月采样偏差的处理方法；但<b>选哪 4 类 7 套数据、怎么定义公共时段、怎么判定收支闭合是否成立、结论该怎么下</b>，全部是我自己的判断。最后再用跨产品秩相关 0.963 独立验证一遍——AI 是提速的，不是替我做决定的。</p>
+        <div class="dl-row">
+          <a class="dl" href="assets/pdf/pacific-sea-level.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>查看汇报 PPT（PDF）</a>
+        </div>
+      </div>
+
+      <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+      <p class="praise">
+        我们的专业课老师经常鼓励我们借助 AI 完成作业——把 AI 当成一个随时可以请教的助教，用来查方法、对口径、debug，而不是代替自己思考。所以我的习惯一直很明确：<strong>重复的体力活交给 AI，判断与结论留给自己</strong>。AI 帮我更快地跑通、更快地试错，但每一处口径、每一个结论、每一张图，都经过我自己的核对与验证。
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== Contact ==================== -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <span class="sec-label">04 / Contact</span>
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <h2>聊聊吧</h2>
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <p class="sec-sub">寒假实习（数据分析 / 项目助理 / 业务运营）随时可以聊，简历和项目代码都能发。</p>
+      </div>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="tel:+8615819815507">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <span class="txt"><span class="k">Phone</span><span class="v">+86 158 1981 5507</span></span>
+        </a>
+        <a class="contact-card" href="mailto:julaiti@mail2.sysu.edu.cn">
+          <span class="ico"><svg viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <span class="txt"><span class="k">Email</span><span class="v">julaiti@mail2.sysu.edu.cn</span></span>
+        </a>
+        <div class="contact-card">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.6 9.6 0 0 1-2.8-.4L4 21l1.4-3.9A8.3 8.3 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg></span>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <span class="txt"><span class="k">WeChat</span><span class="v">LZNaa0501</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+    <span>© <span id="yr">2026</span> 莱娜 · 中山大学遥感科学与技术</span>
+    <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+    <span></span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // 视频自动替换占位框：assets/speaking-N.mp4 存在就换成播放器，不存在就保留占位提示
+  (function () {
+    ['1', '2'].forEach(function (n) {
+      var v = document.getElementById('talk' + n);
+      var slot = document.getElementById('videoSlot' + n);
+      if (!v || !slot) return;
+
+      function swap() {
+        v.hidden = false;
+        slot.classList.add('filled');
+        slot.replaceChildren(v);
+        // 按视频自己的宽高比撑框：竖屏就竖着显示，横屏就横着显示，都不留黑边
+        if (v.videoWidth && v.videoHeight) {
+          slot.style.aspectRatio = v.videoWidth + ' / ' + v.videoHeight;
+        }
+      }
+      // 本地打开时如果文件不存在，error 事件可能早于这里绑定；用 readyState/error 兜底
+      if (v.readyState >= 1) { swap(); }
+      else if (!v.error) { v.addEventListener('loadedmetadata', swap, { once: true }); }
+    });
+  })();
+</script>
+
+</body>
+</html>
