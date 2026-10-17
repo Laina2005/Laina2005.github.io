@@ -1026,25 +1026,38 @@ r2 = 1 - (np.sum((y - y_pred)**2) / np.sum((y - np.mean(y))**2))</code></pre>
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  // 视频自动替换占位框：assets/speaking-N.mp4 存在就换成播放器，不存在就保留占位提示
+  // 把视频放进播放框。
+  // 注意：手机上（尤其微信内置浏览器）不会自动预加载，loadedmetadata 可能永远不触发，
+  // 所以不能"等加载完再放"，要立刻放进去；宽高比等拿到元数据后再校准。
   (function () {
     ['1', '2'].forEach(function (n) {
       var v = document.getElementById('talk' + n);
       var slot = document.getElementById('videoSlot' + n);
       if (!v || !slot) return;
 
-      function swap() {
-        v.hidden = false;
-        slot.classList.add('filled');
-        slot.replaceChildren(v);
-        // 按视频自己的宽高比撑框：竖屏就竖着显示，横屏就横着显示，都不留黑边
+      function fit() {
         if (v.videoWidth && v.videoHeight) {
           slot.style.aspectRatio = v.videoWidth + ' / ' + v.videoHeight;
         }
       }
-      // 本地打开时如果文件不存在，error 事件可能早于这里绑定；用 readyState/error 兜底
-      if (v.readyState >= 1) { swap(); }
-      else if (!v.error) { v.addEventListener('loadedmetadata', swap, { once: true }); }
+
+      v.hidden = false;
+      slot.classList.add('filled');
+      // 用 innerHTML + appendChild 而不是 replaceChildren：老版微信/安卓浏览器不支持后者
+      slot.innerHTML = '';
+      slot.appendChild(v);
+      fit();
+      v.addEventListener('loadedmetadata', fit);
+
+      // 文件缺失 / 格式不支持时，退回一行提示，别留一块黑框
+      v.addEventListener('error', function () {
+        var hint = document.createElement('div');
+        hint.className = 'hint';
+        hint.textContent = '视频加载失败，请检查 assets/speaking-' + n + '.mp4';
+        slot.classList.remove('filled');
+        slot.innerHTML = '';
+        slot.appendChild(hint);
+      });
     });
   })();
 </script>
