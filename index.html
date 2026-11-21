@@ -440,6 +440,8 @@ section[id]{scroll-margin-top:calc(var(--navh) + 20px)}
   .ai-item p{color:#9aa0a6}
   .ai-case p{color:#b6bcc6}
 }
+.cards.cards-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:860px){.cards.cards-2{grid-template-columns:1fr}}
 </style>
 </head>
 
@@ -451,6 +453,8 @@ section[id]{scroll-margin-top:calc(var(--navh) + 20px)}
     <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
     <a href="#top" class="brand">莱娜<span class="dot">.</span></a>
     <nav class="nav-links">
+      <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+      <a href="#experience" data-short="实习"><span>Experience</span></a>
       <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
       <a href="#english" data-short="English"><span>English Proficiency &amp; Communication</span></a>
       <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
@@ -478,9 +482,9 @@ section[id]{scroll-margin-top:calc(var(--navh) + 20px)}
 
         <div class="intro">
           <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-          <p>您好，我是莱娜，中山大学遥感科学与技术专业本科生。我可以熟练使用Python、Matlab进行数据清洗、统计建模与可视化，掌握ArcGIS、ENVI空间分析，持计算机二级证书；英语通过CET-6，具备良好的英文文献阅读与技术文档理解能力。我注重AI协作，在项目中熟练借助AI工具辅助代码调试、方法检索与结果核对，提升分析与实现效率。曾在 AI 协作下完成太平洋海平面变化趋势分析项目，整合4类7套异构数据产品，巧妙处理GRACE缺月带来的采样偏差，完成趋势拟合与不确定性分析，并用跨产品秩相关0.963验证结果一致性；也做过车牌识别系统，兼顾传统图像处理与深度学习两条路线，整牌准确率达76.7%。校园中担任学生助理与学生会干事，具备数据校对、活动统筹与沟通协作能力。我做事细致、能独立推进项目，希望在实践中进一步提升自身能力。</p>
+          <p>我是莱娜，中山大学遥感科学与技术专业大三学生。做过 7 套多源数据的对齐与趋势建模、城市中心提取、遥感影像分类，也用 Python 做过 AI 标注数据质量核查和外卖配送压力评估。两段数据分析实习，一段在 AI 硬件公司看标注质量，一段在项目型公司做配送压力模型和经营台账。现在在找数据分析寒假实习。</p>
           <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-          <p class="en">Hello, I'm Lena, an undergraduate student majoring in Remote Sensing Science and Technology at Sun Yat-sen University. I am proficient in using Python and MATLAB for data cleaning, statistical modeling, and visualization, and I have hands-on experience with ArcGIS and ENVI for spatial analysis. I also hold a National Computer Rank Examination Level 2 certificate. I have passed CET-6 and possess strong English reading skills, enabling me to comprehend academic literature and technical documentation effectively. I place great emphasis on AI collaboration and have, in my projects, skillfully leveraged AI tools to assist with code debugging, methodology retrieval, and result verification, thereby enhancing analytical and implementation efficiency. I independently completed a project analyzing Pacific sea-level change trends, in which I integrated four categories of heterogeneous data products (seven datasets in total), adeptly addressed the sampling bias caused by missing GRACE months, and conducted trend fitting and uncertainty analysis. I validated the consistency of my results with a cross-product rank correlation of 0.963. I have also developed a license plate recognition system, covering both traditional image processing and deep learning approaches, achieving an overall plate recognition accuracy of 76.7%. On campus, I have served as a student assistant and a member of the student union, where I developed skills in data proofreading, event coordination, and communication. I am detail-oriented and capable of independently driving projects forward, and I hope to further enhance my abilities through practical experience.</p>
+          <p class="en">Hi, I'm Lena, a third-year Remote Sensing student at Sun Yat-sen University. I've worked on multi-source data alignment and trend modeling, urban center extraction, and remote sensing image classification, and used Python for AI annotation quality checks and delivery-pressure analysis. My two data-analysis internships covered annotation quality at an AI hardware company and a delivery-pressure model plus business ledgers at a project-based company. I'm looking for a winter data-analysis internship.</p>
         </div>
 
         <div class="contact-row">
@@ -508,12 +512,64 @@ section[id]{scroll-margin-top:calc(var(--navh) + 20px)}
     </div>
   </section>
 
+  <!-- ==================== 实习经历 ==================== -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="sec-head">
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <span class="sec-label">01 / Experience</span>
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <h2>实习经历</h2>
+        <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+        <p class="sec-sub">两段数据分析实习：一段在 AI 硬件公司做标注数据质量，一段在项目型公司做配送压力评估和经营数据。</p>
+      </div>
+      <div class="cards cards-2">
+        <article class="card">
+          <div class="card-top">
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            <h3>宇灵无限科技（Skyris）<br>数据分析实习生</h3>
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            <span class="role">2026.06 – 2026.09</span>
+          </div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="tools"><span>Python</span><span>数据清洗</span><span>标注质量</span><span>数据看板</span></div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="body">
+            清洗 3 条 AI 产品线的对话与标注数据，建了字段完整性、重复率、标签一致性 3 项校验规则；用 Python 统计标注准确率和类别分布，定位 2 类高频错标；搭了一个标注质量看板，跟踪准确率、漏标率、返修率，每周把异常清单发给产品和算法。
+          </div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="result">
+            周均抽检 <b>4 小时降到 1.5 小时</b>，复检准确率 <b>82% 升到 94%</b>；规范覆盖 3 条产品线。
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            <h3>成都绘声有限公司<br>数据分析实习生</h3>
+            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+            <span class="role">2025.01 – 2025.04</span>
+          </div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="tools"><span>Python</span><span>ArcGIS</span><span>Excel</span><span>数据建模</span></div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="body">
+            主导搭建外卖配送压力评估工具，接入高德 POI、OSM 路网和 4 类功能区数据，按 500 m 网格计算 DPI，输出 4 套专题图；同时用 Excel 建项目台账，清洗报价、成本、回款数据，做月度经营分析。
+          </div>
+          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
+          <div class="result">
+            分出 <b>5 级压力区</b>，给出站点选址和骑手调度建议；定位 <b>2 个成本偏差项</b>。
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== English ==================== -->
   <section class="section" id="english">
     <div class="wrap">
       <div class="sec-head">
         <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-        <span class="sec-label">01 / English</span>
+        <span class="sec-label">02 / English</span>
         <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
         <h2>English Proficiency &amp; Communication</h2>
       </div>
@@ -580,7 +636,7 @@ section[id]{scroll-margin-top:calc(var(--navh) + 20px)}
 
       <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
       <p class="praise">
-这里记录了我日常的英语口语练习视频。在这些视频中，我尝试用英文分享自己的想法，整体表达比较自然流畅。对我来说，语言是帮助我更好地理解专业知识、顺畅沟通的工具。在日常学习中，我们专业老师经常会布置大量的英文文献阅读，我也有一门全英授课的专业课。这些真实的学术环境让我习惯了直接用英文去理解和消化信息。在这个过程中，我不仅积累了许多专业词汇，也逐渐培养了自己清晰的表达逻辑。我始终认为，好的沟通不仅仅是词汇的堆砌，更是准确传递信息和真诚交流的过程。希望这些日常的积累，能帮助我在未来的跨文化协作与实习工作中，更从容地应对各种交流场景。
+这里是我平时练口语的几段视频，没有写稿，就是想到什么讲什么，所以磕巴的地方也留着。我们专业英文文献多，还有一门全英授课的专业课，读得多了，开口的时候就没那么别扭。说得不算漂亮，把意思讲清楚就行。
       </p>
     </div>
   </section>
@@ -590,14 +646,14 @@ section[id]{scroll-margin-top:calc(var(--navh) + 20px)}
     <div class="wrap">
       <div class="sec-head">
         <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-        <span class="sec-label">02 / Work</span>
+        <span class="sec-label">03 / Work</span>
         <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
         <h2>Projects</h2>
         <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-        <p class="sec-sub">七个项目，从多源数据整合与统计建模，到算法实现与空间制图。每个项目都附有汇报 PPT、代码、地图或演示视频，可在线查看。</p>
+        <p class="sec-sub">六个项目，数据整合、统计建模、算法实现、空间制图都有。每个项目都附了汇报 PPT、代码、地图或演示视频，点开就能看。</p>
       </div>
 
-      <div class="cards">
+      <div class="cards cards-2">
 
         <!-- ==================== 项目 1 ==================== -->
         <article class="card">
@@ -611,7 +667,7 @@ section[id]{scroll-margin-top:calc(var(--navh) + 20px)}
           <div class="tools"><span>Python</span><span>pandas</span><span>xarray</span><span>Matlab</span><span>AI 协作</span></div>
           <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
           <div class="body">
-            整合 4 类 7 套异构产品——卫星测高海平面异常（CMEMS）、三种 GRACE/GRACE-FO mascon 海水质量（CSR / JPL / GSFC）、两类比容海平面（IAP / SIO）——统一经度约定与时间口径，锁定 2005–2024 年共 225 个月公共时段。针对 GRACE 每年缺 2–4 个月造成的采样偏差，用「扣逐月气候态 + 按可用月求年均」在零插值条件下消除偏差；对逐月序列拟合四项模型提取趋势项，并用 Newey-West 校正自相关。
+            整合 4 类 7 套异构产品——卫星测高海平面异常（CMEMS）、3 套 GRACE 质量解算（CSR / JPL / GSFC）、两类比容海平面（IAP / SIO）——统一经度约定与时间口径，锁定 2005.01–2023.09 共 225 个月公共时段。针对 GRACE 每年缺 2–4 个月造成的采样偏差，用「扣逐月气候态 + 按可用月求年均」在零插值条件下消除偏差；对逐月序列拟合四项模型提取趋势项，并用 Newey-West 校正自相关。
           </div>
           <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
           <div class="result">
@@ -643,7 +699,7 @@ section[id]{scroll-margin-top:calc(var(--navh) + 20px)}
         <article class="card">
           <div class="card-top">
             <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-            <h3>车牌识别系统<br>图像处理 × 深度学习双路线</h3>
+            <h3>车牌识别系统（DIP＋LPRNet 双路线）</h3>
             <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
             <span class="role">算法实现</span>
           </div>
@@ -651,11 +707,11 @@ section[id]{scroll-margin-top:calc(var(--navh) + 20px)}
           <div class="tools"><span>Python</span><span>OpenCV</span><span>PyTorch</span><span>NumPy</span><span>PIL</span></div>
           <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
           <div class="body">
-            传统路线实现「HSV 定位 → 四角点透视校正 → CLAHE + OTSU → 投影分割 → 模板匹配」完整链路，自研「字符间隙排序法」解决窄字符误并错位；深度学习路线搭 LPRNet（Conv×4 → BiLSTM → CTC），实现无需分割的整图序列识别。两条路线共用同一套合成样本，便于对照定位各自的失效模式。
+            基于 30 万＋ CCPD 样本，传统路线实现「HSV 定位 → 四角点透视校正 → CLAHE + OTSU → 投影分割 → 模板匹配」完整链路，自研「字符间隙排序法」解决窄字符误并错位；深度学习路线搭 LPRNet（Conv×4 → BiLSTM → CTC），实现无需分割的整图序列识别。两条路线共用同一批测试样本，便于对照定位各自的失效模式。
           </div>
           <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
           <div class="result">
-            整牌准确率 <b>76.7%</b>、字符级 <b>87.4%</b>、分割字符数正确率 <b>98.3%</b>；定位出两大失效原因并提出改进方案。
+            151 张测试样本上字符准确率 <b>55%–62%</b>；错分主要来自分割不稳定与省份样本偏斜。
           </div>
 
           <div class="evi">
@@ -686,41 +742,7 @@ import lprnet_pytorch as lpr                                # 路线 B：LPRNet�
           </div>
         </article>
 
-        <!-- ==================== 项目 3 ==================== -->
-        <article class="card">
-          <div class="card-top">
-            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-            <h3>广州大学城外卖配送压力评价</h3>
-            <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-            <span class="role">数据建模</span>
-          </div>
-          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-          <div class="tools"><span>ArcGIS</span><span>高德 POI</span><span>Excel</span><span>空间分析</span></div>
-          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-          <div class="body">
-            融合高德餐饮 POI、路网、宿舍区三类数据，构建「餐饮供给 + 宿舍需求 + 可达性」的配送压力指数模型；用核密度、缓冲区、栅格叠加等空间方法量化压力分布，并拆解出主导因子与空间分异，把抽象的配送压力转化为可量化、可比较的空间指标。
-          </div>
-          <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-          <div class="result">
-            输出 <b>4 类</b>规范化专题地图，识别大学城高压力配送区域，为外卖站点选址与骑手调度提供依据。
-          </div>
-
-          <div class="evi">
-            <span class="evi-label">地图作品 · 输出结果</span>
-            <div class="shot-grid">
-              <figure><img src="assets/img/delivery-comprehensive.jpg" alt="配送压力综合评价图" loading="lazy"><figcaption>配送压力综合评价图</figcaption></figure>
-              <figure><img src="assets/img/delivery-dominant.jpg" alt="主导因子空间分异图" loading="lazy"><figcaption>配送压力主导因子空间分异图</figcaption></figure>
-              <figure><img src="assets/img/delivery-poi.jpg" alt="餐饮 POI 与宿舍分布图" loading="lazy"><figcaption>餐饮 POI 与宿舍空间分布图</figcaption></figure>
-              <figure><img src="assets/img/delivery-dorm.jpg" alt="各大学宿舍外卖依赖度图" loading="lazy"><figcaption>各大学宿舍外卖依赖度比例图</figcaption></figure>
-            </div>
-            <div class="ext">
-              <span class="ext-title">数据来源</span>
-              <a href="https://lbs.amap.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>高德开放平台（POI 数据）</a>
-              <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>OpenStreetMap（路网底图）</a>
-              <a href="https://www.esri.com/zh-cn/arcgis/products/arcgis-pro" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>ArcGIS Pro 空间分析</a>
-            </div>
-          </div>
-        </article>
+        
 
         <!-- ==================== 项目 4 ==================== -->
         <article class="card">
@@ -734,11 +756,11 @@ import lprnet_pytorch as lpr                                # 路线 B：LPRNet�
           <div class="tools"><span>rasterio</span><span>SciPy</span><span>geopandas</span><span>pandas</span></div>
           <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
           <div class="body">
-            基于人口密度、GDP、建筑密度三类栅格，用局部极大值滤波 + 最小间距去重提取三级城市中心（L1/L2/L3）；对每个中心拟合 Clark 距离衰减模型 A·exp(−βd)，用反距离加权最小二乘求衰减系数 β 与拟合优度 R²，从而量化城市单中心/多中心结构。
+            基于人口密度、GDP、建筑密度三类栅格，用局部极大值滤波 + 最小间距去重提取三级城市中心（L1/L2/L3）；对每个中心拟合 Clark 距离衰减模型 A·exp(−βd)，用反距离加权最小二乘求衰减系数 β 与拟合优度 R²，从而量化城市单中心/多中心结构；用 WarpedVRT 只裁切目标区域，避免大数据量栅格裁切卡死。
           </div>
           <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
           <div class="result">
-            用 <b>WarpedVRT 虚拟重投影</b>替代全量重投影，只裁切目标区域，解决大数据量栅格裁切卡死与内存溢出。
+            按 L1 1 个 / L2 6 个 / L3 12 个的配额提取 <b>57 个</b>中心；识别 <b>2 个</b>三维度一致的核心区，输出 <b>3 套</b>专题图，为选址和资源投放提供依据。
           </div>
 
           <div class="evi">
@@ -779,7 +801,7 @@ r2 = 1 - (np.sum((y - y_pred)**2) / np.sum((y - np.mean(y))**2))</code></pre>
           </div>
           <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
           <div class="result">
-            完成 <b>7 类</b>地物解译，总体精度 <b>76%</b>、Kappa <b>0.69</b>。
+            完成 <b>6 类</b>地物分类，最大似然法总体精度 <b>76.08%</b>、Kappa <b>0.694</b>；裸地用户精度 49.4%，误分集中在滩涂与水体交界。
           </div>
 
           <div class="evi">
@@ -787,7 +809,7 @@ r2 = 1 - (np.sum((y - y_pred)**2) / np.sum((y - np.mean(y))**2))</code></pre>
             <a class="pdfbox" href="assets/pdf/yangtze-remote-sensing.pdf" target="_blank" rel="noopener">
               <span class="pdf-ico">PDF</span>
               <span>
-                <span class="pdf-t">遥感原理大作业汇报 · 长江口影像处理与地物解译</span><br>
+                <span class="pdf-t">遥感原理课程汇报 · 长江口影像处理与地物解译</span><br>
                 <span class="pdf-s">处理流程、4 种分类方法对比与精度评价（在线查看 / 下载）</span>
               </span>
             </a>
@@ -800,7 +822,7 @@ r2 = 1 - (np.sum((y - y_pred)**2) / np.sum((y - np.mean(y))**2))</code></pre>
           </div>
         </article>
 
-        <!-- ==================== 项目 6 ==================== -->
+<!-- ==================== 项目 6 ==================== -->
         <article class="card">
           <div class="card-top">
             <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
@@ -837,7 +859,7 @@ r2 = 1 - (np.sum((y - y_pred)**2) / np.sum((y - np.mean(y))**2))</code></pre>
             <a class="pdfbox" href="assets/pdf/park-path-planning.pdf" target="_blank" rel="noopener">
               <span class="pdf-ico">PDF</span>
               <span>
-                <span class="pdf-t">数据结构与算法大作业汇报 PPT</span><br>
+                <span class="pdf-t">项目汇报 PPT</span><br>
                 <span class="pdf-s">系统设计、算法流程与测试结果（在线查看 / 下载）</span>
               </span>
             </a>
@@ -853,7 +875,7 @@ r2 = 1 - (np.sum((y - y_pred)**2) / np.sum((y - np.mean(y))**2))</code></pre>
         <article class="card">
           <div class="card-top">
             <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-            <h3>3S 野外综合实习</h3>
+            <h3>基础地理数据采集与成果交付</h3>
             <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
             <span class="role">外业采集</span>
           </div>
@@ -861,22 +883,26 @@ r2 = 1 - (np.sum((y - y_pred)**2) / np.sum((y - np.mean(y))**2))</code></pre>
           <div class="tools"><span>GNSS</span><span>RTK</span><span>全站仪</span><span>Matlab</span></div>
           <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
           <div class="body">
-            实地操作 GNSS、全站仪、RTK 完成控制点与碎部点采集，用 Matlab 完成导线网平差与精度评估；并处理无人机与高光谱影像，产出校园数字化地图，覆盖从外业采集到内业成图、精度验证的完整流程。
+            实地操作 GNSS、全站仪、RTK 完成控制点与碎部点采集，用 Matlab 完成导线网平差与精度评估；并处理无人机与高光谱影像，产出测区数字化地图，覆盖从外业采集到内业成图、精度验证的完整流程。
           </div>
           <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
           <div class="result">
-            完成影像校正、分类与精度验证全流程，输出校园数字化地图。
+            完成影像校正、分类与精度验证全流程，输出测区数字化地图。
           </div>
 
           <div class="evi">
-            <span class="evi-label">实习成果 · 数字化地图</span>
-            <img class="shot-solo" src="assets/img/3s-campus-map.png" alt="中珠校园数字化地图" loading="lazy">
+            <span class="evi-label">成果 · 数字化地图</span>
+            <img class="shot-solo" src="assets/img/3s-campus-map.png" alt="测区数字化地图" loading="lazy">
             <div class="ext">
               <span class="ext-title">相关参考</span>
               <a href="https://gp.sysu.edu.cn/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>中山大学地理科学与规划学院</a>
             </div>
           </div>
         </article>
+
+        
+
+        
 
       </div>
     </div>
@@ -887,11 +913,11 @@ r2 = 1 - (np.sum((y - y_pred)**2) / np.sum((y - np.mean(y))**2))</code></pre>
     <div class="wrap">
       <div class="sec-head">
         <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-        <span class="sec-label">03 / Method</span>
+        <span class="sec-label">04 / Method</span>
         <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
         <h2>AI Skills</h2>
         <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-        <p class="sec-sub">我不把 AI 当成「替我做作业的工具」，而是当成一个需要被正确调度的协作方。下面每条方法都对应一个我实际做过的项目。</p>
+        <p class="sec-sub">我用 AI 主要做出初稿、跑批量和给排查方向这三类事。数字和结论还是回原始数据核对，AI 的直接输出不会进交付物。</p>
       </div>
 
       <div class="ai-grid">
@@ -902,7 +928,7 @@ r2 = 1 - (np.sum((y - y_pred)**2) / np.sum((y - np.mean(y))**2))</code></pre>
           <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
           <h3>AI 辅助编程</h3>
           <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-          <p>用 AI 搭起车牌识别系统的算法骨架、写 LPRNet 网络结构并协助调试。但对给出的每一段代码，都会先跑通、再逐行确认逻辑——<b>「能跑」不等于「正确」</b>，这个区别在算法题里尤其致命。</p>
+          <p>用 AI 搭起车牌识别系统的算法骨架、写 LPRNet 网络结构并协助调试。但对给出的每一段代码，都会先跑通、再逐行确认逻辑——<b>「能跑」不等于「正确」</b>，这个区别在做图像处理的时候特别要命。</p>
         </div>
 
         <div class="ai-item">
@@ -911,7 +937,7 @@ r2 = 1 - (np.sum((y - y_pred)**2) / np.sum((y - np.mean(y))**2))</code></pre>
           <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
           <h3>AI 辅助文献阅读</h3>
           <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-          <p>读海平面趋势分析涉及的 GRACE mascon、比容海平面等英文文献时，用 AI 快速拆解方法与结论。但关键数字、定义和单位<b>一律回原文核对</b>，避免二手转述带来的偏差。</p>
+          <p>读海平面趋势分析涉及的 GRACE 质量解算、比容海平面等英文文献时，用 AI 快速拆解方法与结论。但关键数字、定义和单位<b>一律回原文核对</b>，避免二手转述带来的偏差。</p>
         </div>
 
         <div class="ai-item">
@@ -938,7 +964,7 @@ r2 = 1 - (np.sum((y - y_pred)**2) / np.sum((y - np.mean(y))**2))</code></pre>
           <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
           <h3>规范前置</h3>
           <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-          <p>开工前先把科研绘图规范与配色色卡交给 AI 学，并附已发表论文的图作范例。长江口遥感制图就用这套办法，保证配色统一、坐标轴与图例齐全，而不是库默认配色。</p>
+          <p>开工前先把科研绘图规范与配色色卡交给 AI 学，并附已发表论文的图作范例。长江口遥感制图就是这么来的，出来的图配色统一、坐标轴和图例都齐，不是库的默认配色。</p>
         </div>
 
         <div class="ai-item">
@@ -965,9 +991,9 @@ r2 = 1 - (np.sum((y - y_pred)**2) / np.sum((y - np.mean(y))**2))</code></pre>
       <div class="ai-case">
         <span class="tag">具体案例 · Case Study</span>
         <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-        <h3>太平洋海平面变化趋势分析 —— 全程 AI 协作完成</h3>
+        <h3>太平洋海平面变化趋势分析 —— AI 用在了哪儿</h3>
         <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-        <p>这是我把「AI 当协作者」用得最完整的一个项目：AI 帮我搭起 xarray / pandas 的数据处理骨架、写趋势拟合与 Newey-West 自相关校正的代码，也帮我快速检索 GRACE 缺月采样偏差的处理方法；但<b>选哪 4 类 7 套数据、怎么定义公共时段、怎么判定收支闭合是否成立、结论该怎么下</b>，全部是我自己的判断。最后再用跨产品秩相关 0.963 独立验证一遍——AI 是提速的，不是替我做决定的。</p>
+        <p>这是我把 AI 用得最深的一个项目。xarray / pandas 的数据处理骨架、趋势拟合和 Newey-West 校正的代码、GRACE 缺月该怎么处理，都是问 AI 问出来的；但<b>选哪 4 类 7 套数据、公共时段怎么定、收支闭合算不算成立、结论怎么下</b>，这些是我自己拍的。最后用跨产品秩相关 0.963 独立验了一遍。AI 让我快，决定还是我做的。</p>
         <div class="dl-row">
           <a class="dl" href="assets/pdf/pacific-sea-level.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>查看汇报 PPT（PDF）</a>
         </div>
@@ -975,7 +1001,7 @@ r2 = 1 - (np.sum((y - y_pred)**2) / np.sum((y - np.mean(y))**2))</code></pre>
 
       <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
       <p class="praise">
-        我们的专业课老师经常鼓励我们借助 AI 完成作业——把 AI 当成一个随时可以请教的助教，用来查方法、对口径、debug，而不是代替自己思考。所以我的习惯一直很明确：<strong>重复的体力活交给 AI，判断与结论留给自己</strong>。AI 帮我更快地跑通、更快地试错，但每一处口径、每一个结论、每一张图，都经过我自己的核对与验证。
+        专业课老师一直鼓励我们把 AI 当助教用——查方法、对口径、debug，都行，但别让它替你想。我的做法也简单：<strong>重复的体力活交出去，判断和结论自己留着</strong>。AI 让我跑得更快、试错更便宜，可每个口径、每条结论、每张图，最后还是得我自己核过一遍才敢写出去。
       </p>
     </div>
   </section>
@@ -985,7 +1011,7 @@ r2 = 1 - (np.sum((y - y_pred)**2) / np.sum((y - np.mean(y))**2))</code></pre>
     <div class="wrap">
       <div class="sec-head">
         <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
-        <span class="sec-label">04 / Contact</span>
+        <span class="sec-label">05 / Contact</span>
         <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
         <h2>聊聊吧</h2>
         <!-- ✏️ 可改：只改这一处的中文/英文，尖括号里的东西别动 -->
